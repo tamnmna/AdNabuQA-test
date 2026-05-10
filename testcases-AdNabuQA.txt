@@ -1,0 +1,70 @@
+Test Cases — Product Search & Add to Cart
+
+
+A) Product Search — Test Cases
+
+TC_01 — Search with Valid Product Name (Positive)
+
+ Open homepage
+ - Enter a valid product name in search bar
+ - and then Click Search
+
+Expected Result:
+
+- Relevant product(s) should be displayed
+- Search results should match entered keyword
+
+TC_02 — Search with Partial Product Name (Positive)
+
+- Enter partial keyword of existing product
+- Click Search
+
+Expected Result:
+- Matching products containing the partial keyword should appear
+
+TC_03 — Search with Non-Existing Product (Negative)
+
+- Enter invalid/non-existing product name
+- Click Search
+
+Expected Result:
+
+- "No products found” message should appear
+-  No unrelated products should be displayed
+
+TC_04 — Search with Special Characters (Edge Case / Negative)
+
+- Enter special characters like:
+
+```text id="rq1q0g"
+@#$%^&
+```
+- Click Search
+
+- Expected Result:
+
+- System should handle input gracefully
+- No application crash or broken page
+- No irrelevant results displayed
+
+B) Add to Cart — Test Cases
+
+ TC_05 — Add Available Product to Cart (Positive)
+
+- Open product page
+- Click “Add to Cart”
+
+Expected Result:
+
+- Product should be added successfully
+- Cart count should increase
+- Product should appear in cart page
+
+TC_06 — Add Product Quantity Beyond Available Stock (Edge Case / Negative)
+
+- Add a product multiple times exceeding stock limit
+
+Expected Result:
+
+- Proper validation/error message should appear
+- User should not be allowed to exceed available quantity
